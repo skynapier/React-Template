@@ -44,8 +44,15 @@ const Home = () => {
   return (
     <Box id="home" maxWidth="100%" justifyContent="center" height="1200px">
       <Box maxWidth="90%" px={2} margin="0 auto">
-        <Grid container display="flex" >
-          <Grid container item display="flex" justifyContent="center" md={12} py={2}>
+        <Grid container display="flex">
+          <Grid
+            container
+            item
+            display="flex"
+            justifyContent="center"
+            md={12}
+            py={2}
+          >
             <Swiper
               modules={[Navigation, Pagination, A11y]}
               spaceBetween={50}

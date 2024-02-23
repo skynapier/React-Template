@@ -143,10 +143,16 @@ export default function Form() {
   };
 
   return (
-    <Box id="form"  display='flex' justifyContent="center" >
+    <Box id="form" display="flex" justifyContent="center">
       <ThemeProvider theme={customTheme(outerTheme)}>
-        <Grid container  maxWidth="70%" justifyContent="center" m={2} spacing={2}>
-          <Grid container item md={6}  maxWidth="70%">
+        <Grid
+          container
+          maxWidth="70%"
+          justifyContent="center"
+          m={2}
+          spacing={2}
+        >
+          <Grid container item md={6} maxWidth="70%">
             <TextField
               id="standard-basic"
               label="First Name"
@@ -155,7 +161,7 @@ export default function Form() {
               onChange={handleFirstNameChange}
             />
           </Grid>
-          <Grid container item  md={6} maxWidth="70%">
+          <Grid container item md={6} maxWidth="70%">
             <TextField
               id="standard-basic"
               label="Last Name"
@@ -165,41 +171,40 @@ export default function Form() {
             />
           </Grid>
           <Grid container item md={6}>
-          <TextField
-          id="standard-basic"
-          label="Email"
-          variant="standard"
-          sx={{ width: "100%" }}
-          onChange={handlEmailChange}
-        />
+            <TextField
+              id="standard-basic"
+              label="Email"
+              variant="standard"
+              sx={{ width: "100%" }}
+              onChange={handlEmailChange}
+            />
           </Grid>
-          <Grid container item  md={6}>
-          <TextField
-          id="standard-basic"
-          label="Phone Number"
-          variant="standard"
-          sx={{ width: "100%" }}
-          onChange={handlPhoneChange}
-        />
+          <Grid container item md={6}>
+            <TextField
+              id="standard-basic"
+              label="Phone Number"
+              variant="standard"
+              sx={{ width: "100%" }}
+              onChange={handlPhoneChange}
+            />
           </Grid>
-          <Grid container item  md={12}>
-          <TextField
-          id="standard-basic"
-          fullWidth
-          multiline // Enable multiline input
-          rows={4} // Set initial number of rows
-          label="Note"
-          variant="standard"
-          onChange={handleNoteChange}
-        />
+          <Grid container item md={12}>
+            <TextField
+              id="standard-basic"
+              fullWidth
+              multiline // Enable multiline input
+              rows={4} // Set initial number of rows
+              label="Note"
+              variant="standard"
+              onChange={handleNoteChange}
+            />
           </Grid>
-          <Grid container item  md={12}>
-          <Button variant="contained" sx={{ width: "100%" }} onClick={submit}>
-          Contact Now!
-        </Button>
+          <Grid container item md={12}>
+            <Button variant="contained" sx={{ width: "100%" }} onClick={submit}>
+              Contact Now!
+            </Button>
           </Grid>
         </Grid>
-
       </ThemeProvider>
     </Box>
   );

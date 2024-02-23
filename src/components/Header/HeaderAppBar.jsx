@@ -58,16 +58,27 @@ const HeaderAppBar = ({ routes }) => {
   };
 
   return (
-    <Box pb={2} justifyContent="center"  diplay="flex" margin="0 auto">
+    <Box pb={2} justifyContent="center" diplay="flex" margin="0 auto">
       <Toolbar disableGutters>
-        <Box id="test" sx={{ height:"100px", flexGrow: 1, display: { xs: "none", md: "flex" } }}  >
-          <Tabs value={currentPath} aria-label="wrapped label tabs example" sx={{  width:"100%", height:"100px"}} >
+        <Box
+          id="test"
+          sx={{
+            height: "100px",
+            flexGrow: 1,
+            display: { xs: "none", md: "flex" },
+          }}
+        >
+          <Tabs
+            value={currentPath}
+            aria-label="wrapped label tabs example"
+            sx={{ width: "100%", height: "100px" }}
+          >
             <Tab
               icon={logo()}
               value={routes[0].tab}
               component={Link}
               to={routes[0].tab}
-              sx={{ width:"30%", height:"100px"}}
+              sx={{ width: "30%", height: "100px" }}
             ></Tab>
             {pages.map((page, index) => (
               <Tab
@@ -76,7 +87,7 @@ const HeaderAppBar = ({ routes }) => {
                 label={page}
                 component={Link}
                 to={routes[index + 1].tab}
-                sx={{ width:"30%",  height:"100px"}}
+                sx={{ width: "30%", height: "100px" }}
               ></Tab>
             ))}
           </Tabs>
